@@ -1,0 +1,18 @@
+
+
+file(GLOB OPENGEX_INLCUDE ${CMAKE_CURRENT_SOURCE_DIR}/opengex/OpenGEX.h)
+file(GLOB OPENGEX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/opengex/OpenGEX.cpp)
+
+source_group("" FILES ${OPENGEX_INLCUDE})
+source_group("" FILES ${OPENGEX_SOURCE})
+
+set(OpenGEX_lib_INCLUDES
+   ${OPENDDL_INCLUDES}
+   ${OPENGEX_INCLUDE}
+   )
+
+set(OpenGEX_lib_SOURCES
+   ${OPENDDL_SOURCES}
+   ${OPENGEX_SOURCE}
+   )
+

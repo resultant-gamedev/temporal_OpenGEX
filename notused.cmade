@@ -1,0 +1,31 @@
+set(OPENDDL_INCLUDES 
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLArray.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLMap.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLString.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLTree.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLTypes.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/OpenDDL.h
+   )
+
+set(OPENDDL_SOURCES
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLMap.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLString.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/ODDLTree.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/openddl/OpenDDL.cpp
+   )
+
+#file(GLOB OPENDDL_INLCUDES ${CMAKE_CURRENT_SOURCE_DIR}/openddl/*.h)
+#file(GLOB OPENDDL_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/openddl/*.cpp)
+
+source_group("" FILES ${OPENDDL_INLCUDES})
+source_group("" FILES ${OPENDDL_SOURCES})
+
+set(OpenGEX_lib_INCLUDES
+   ${OPENDDL_INCLUDES}
+   ${OPENGEX_INCLUDE}
+   )
+
+set(OpenGEX_lib_SOURCES
+   ${OPENDDL_SOURCES}
+   ${OPENGEX_SOURCE}
+   )
