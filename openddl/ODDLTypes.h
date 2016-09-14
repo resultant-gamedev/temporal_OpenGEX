@@ -51,6 +51,8 @@
 #include <math.h>
 #include <new>
 
+#include <inttypes.h>
+
 
 namespace ODDL
 {
@@ -66,8 +68,8 @@ namespace ODDL
 	typedef int						int32;
 	typedef unsigned int			unsigned_int32;
 
-	typedef __int64					int64;
-	typedef unsigned __int64		unsigned_int64;
+	typedef int64_t					int64;
+	typedef uint64_t				unsigned_int64;
 
 	#if defined(_WIN64)
 
